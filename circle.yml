@@ -3,6 +3,10 @@ machine:
   services:
     - docker
 
+dependencies:
+  override:
+    - sudo pip install docker-compose==1.10.0
+
 ## Customize test commands
 test:
   override:
