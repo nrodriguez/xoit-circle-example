@@ -6,6 +6,7 @@ machine:
 dependencies:
   override:
     - sudo pip install docker-compose==1.10.0
+    - bundle install
 
 ## Customize test commands
 test:
