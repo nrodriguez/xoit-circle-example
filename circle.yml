@@ -1,0 +1,16 @@
+## Customize the test machine
+machine:
+  services:
+    docker
+
+## Customize test commands
+test:
+  override:
+    - make test
+
+## Customize deployment commands
+# deployment:
+#   staging:
+#     branch: master
+#     heroku:
+#       appname: foo-bar-123
