@@ -18,3 +18,14 @@ test:
 #     branch: master
 #     heroku:
 #       appname: foo-bar-123
+#
+# deployment:
+#   staging:
+#     tag: /qa-.*/
+#     commands:
+#     - make release env=qa
+#
+#   production:
+#     tag: /v[0-9].[0-9].[0-9]/
+#     commands:
+#     - make release env=prod
