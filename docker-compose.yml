@@ -1,0 +1,23 @@
+version: '2'
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  test:
+    build: .
+    command: rspec spec
+    environment:
+      #DATABASE_URL: postgresql://postgres:pass@db:5432/myapp_test?pool=5&encoding=utf-8
+      # Run the app in the 'test' environment, instead of the default 'developent'
+      RACK_ENV: test
+      RAILS_ENV: test
+    depends_on:
+      - db

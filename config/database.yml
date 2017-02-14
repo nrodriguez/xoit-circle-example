@@ -1,16 +1,15 @@
-development:
-  adapter: postgresql
-  database: my_database_development
-  pool: 5
-  timeout: 5000
-test:
-  adapter: postgresql
-  database: my_database_test
-  pool: 5
-  timeout: 5000
+default:
+  url: <%= ENV['DATABASE_URL'] %>
 
-production:
+development: &default
   adapter: postgresql
-  database: my_database_production
+  encoding: unicode
+  database: myapp_development
   pool: 5
-  timeout: 5000
+  username: postgres
+  password:
+  host: db
+
+test:
+  <<: *default
+  database: myapp_test
