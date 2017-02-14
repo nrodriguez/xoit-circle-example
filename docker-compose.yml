@@ -19,3 +19,5 @@ services:
       # Run the app in the 'test' environment, instead of the default 'developent'
       RACK_ENV: test
       RAILS_ENV: test
+    depends_on:
+      - db
