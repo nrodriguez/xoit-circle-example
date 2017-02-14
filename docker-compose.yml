@@ -15,8 +15,6 @@ services:
     build: .
     command: rspec spec
     environment:
-      #DATABASE_URL: postgresql://postgres:pass@db:5432/myapp_test?pool=5&encoding=utf-8
-      # Run the app in the 'test' environment, instead of the default 'developent'
       RACK_ENV: test
       RAILS_ENV: test
     depends_on:

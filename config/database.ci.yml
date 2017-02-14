@@ -1,9 +1,0 @@
-test:
-  strict: false
-  database: circle_ruby_test
-  adapter: postgresql
-  username: postgres
-  host: db
-  encoding: utf8
-  collation: sv_SE.UTF-8
-  template: template0
