@@ -1,4 +1,4 @@
-development: &default
+base: &default
   adapter: postgresql
   encoding: unicode
   pool: 5

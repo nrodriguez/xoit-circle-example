@@ -9,6 +9,8 @@ services:
       - .:/myapp
     ports:
       - "3000:3000"
+    environment:
+      DATABASE_HOST: db
     depends_on:
       - db
   test:
@@ -17,5 +19,6 @@ services:
     environment:
       RACK_ENV: test
       RAILS_ENV: test
+      DATABASE_HOST: db
     depends_on:
       - db
