@@ -13,11 +13,12 @@ test:
     - make test
 
 ## Customize deployment commands
-# deployment:
-#   staging:
-#     branch: master
-#     heroku:
-#       appname: foo-bar-123
+deployment:
+  staging:
+    branch: feature/adds_circle_and_docker
+    heroku:
+      appname: xoit-circle-ci 
+
 #
 # deployment:
 #   staging:
