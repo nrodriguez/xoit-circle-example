@@ -5,6 +5,10 @@ machine:
   services:
     - docker
 
+database:
+  override:
+    - echo "Skipping pg"
+
 ## Customize test commands
 test:
   pre:
