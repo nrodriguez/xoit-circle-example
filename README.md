@@ -1,24 +1,10 @@
-# README
+# XOIT Circle examples
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Sample Circle.yml](https://circleci.com/docs/config-sample/)
 
-Things you may want to cover:
 
-* Ruby version
+[Circle Heroku](https://circleci.com/account/heroku)
 
-* System dependencies
+[Circle Heroku Deploy](https://circleci.com/gh/nrodriguez/xoit-circle-example/edit#heroku)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Heroku Key](https://dashboard.heroku.com/account)
