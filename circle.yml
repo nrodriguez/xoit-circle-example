@@ -10,6 +10,7 @@ test:
   pre:
     - pip install docker-compose==1.10.0
   override:
+    - mv config/database.ci.yml config/database.yml
     - make test
 
 ## Customize deployment commands
@@ -17,7 +18,7 @@ deployment:
   staging:
     branch: feature/adds_circle_and_docker
     heroku:
-      appname: xoit-circle-ci 
+      appname: xoit-circle-ci
 
 #
 # deployment:
