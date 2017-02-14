@@ -5,14 +5,11 @@ machine:
   services:
     - docker
 
-dependencies:
-  pre:
-    - sudo pip install docker-compose==1.10.0
-
 ## Customize test commands
 test:
-  override:
+  pre:
     - pip install docker-compose==1.10.0
+  override:
     - make test
 
 ## Customize deployment commands
