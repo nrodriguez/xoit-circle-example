@@ -1,15 +1,17 @@
-default:
-  url: <%= ENV['DATABASE_URL'] %>
-
-development: &default
+base: &default
   adapter: postgresql
   encoding: unicode
-  database: myapp_development
   pool: 5
   username: postgres
   password:
-  host: db
+  host: localhost
+
+development:
+  <<: *default
+  database: myapp_development
+  host: <%= ENV['DATABASE_HOST'] %>
 
 test:
   <<: *default
   database: myapp_test
+  host: <%= ENV['DATABASE_HOST'] %>
